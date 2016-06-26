@@ -4,9 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>WebApp</title>
+<script type="text/javascript">
+var upload = function() {
+    var cppfiles = document.getElementById("cppfile").files[0];
+    return false;
+};
+</script>
 </head>
 <body>
+<form method="post" onsubmit="return upload();">
+  <fieldset>
+    <legend>Upload cpp file</legend>
+    <input type="file" name="cppfile" id="cppfile">
+    <input type="submit" value="Upload">
+  </fieldset>
+</form>
 
 </body>
 </html>
