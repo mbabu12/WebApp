@@ -5,21 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>WebApp</title>
-<script type="text/javascript">
-var upload = function() {
-    var cppfiles = document.getElementById("cppfile").files[0];
-    return false;
-};
-</script>
 </head>
 <body>
-<form method="post" onsubmit="return upload();">
-  <fieldset>
-    <legend>Upload cpp file</legend>
-    <input type="file" name="cppfile" id="cppfile">
-    <input type="submit" value="Upload">
-  </fieldset>
+<form action = "Main" method="post" enctype="multipart/form-data">
+	<fieldset>
+		<legend>Upload cpp file</legend>
+    	<input type="file" name="file">
+    	<legend>Upload input file</legend>
+    	<input type="file" name="input">
+    	<legend>Upload test file</legend>
+    	<input type="file" name="test">
+    	<input type="submit" value="Upload">
+    </fieldset>
 </form>
-
 </body>
 </html>
